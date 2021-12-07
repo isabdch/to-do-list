@@ -1,14 +1,7 @@
-function media (n1, n2) {
-    var nota1 = n1;
-    var nota2 = n2;
-    m = (nota1 + nota2)/2;
-    return m;
+var media = function(n1, n2) {
+    return (n1 + n2)/2;
 }
-
-
-var resultado = media;
-var resultado2 = resultado(9, 6);
-console.log(resultado2);
-
-var total = media(6, 7);
-console.log(total);
+console.log(media(6, 9));
+// ou
+var m = media(6, 9);
+console.log(m);
