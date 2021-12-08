@@ -1,7 +1,16 @@
+var amigos = {
+    nomes: ["Isabelle", "Ana", "Thiago"],
+    idades: [19, 19, 21],
+    filmes: ["Duna", "Um Amor no Natal", "Velozes e Furiosos"]
+}
 
-var arr = [45, 34, 7, 64, 8, 16, 27, 78, 999, 170];
-arr.sort(function (a, b) {
-    return a - b;
-  });
+function idade(a) {
+    if (a >= 18) {
+        return "Aproveite o filme!";
+    } else 
+        return "Você não pode prosseguir por ser menor de idade.";
+}
 
-console.log(arr);
+for (var i in amigos.nomes) {
+    console.log(amigos.nomes[i] + ", você quer assistir " + amigos.filmes[i] + "." + " " + idade(amigos.idades[i]));
+}
