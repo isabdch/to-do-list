@@ -1,13 +1,10 @@
-var posicao = 56;
-
-function position(a) {
-    if (a > 100) {
-        return 100;
-    } else if (a < 0) {
-        return 0;
-    } else if (a => 0 && a <= 100) {
-        return posicao;
-    }
+var n = parseInt(prompt("Digite o número da tabuada:"));
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function tabuada(a) {
+    r = a * arr[i]
+    console.log (a + " x " + arr[i] + " = " + r);
 }
 
-console.log(position(posicao));
+for (var i = 0; i < arr.length; i++) {
+    tabuada(n);
+}
