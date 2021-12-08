@@ -1,10 +1,7 @@
-var n = parseInt(prompt("Digite o número da tabuada:"));
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function tabuada(a) {
-    r = a * arr[i]
-    console.log (a + " x " + arr[i] + " = " + r);
-}
 
-for (var i = 0; i < arr.length; i++) {
-    tabuada(n);
-}
+var arr = [45, 34, 7, 64, 8, 16, 27, 78, 999, 170];
+arr.sort(function (a, b) {
+    return a - b;
+  });
+
+console.log(arr);
