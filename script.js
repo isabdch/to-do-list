@@ -7,7 +7,7 @@ function average(n1, n2) {
 }
 
 function position(avrg) {
-    if (avrg > 6) {
+    if (avrg >= 6) {
         return "APPROVED";
     } else {
         return "FAILED";
@@ -20,4 +20,3 @@ for (var i in names) {
     var avg = average(g1[i], g2[i]);
     console.log(names[i] + " - " + grade1 + " - " + grade2 + " - " + avg + " - " + position(avg) + ".");
 }
-
