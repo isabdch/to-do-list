@@ -1,11 +1,23 @@
-var d = new Date(3957395780380);
-var dias = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
-var meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+let titulo = document.getElementById("titulo");
+titulo.innerHTML =
+  titulo.innerHTML +
+  "<h5 id='subtitulo'>Este é um sub-título inserido no JavaScript.</h5>";
 
-console.log(d);
-console.log(d.getDate());
-console.log(d.getFullYear());
-console.log(d.setMonth(1));
-console.log(meses[d.getMonth()]);
-console.log(d.getDay());
-console.log(dias[d.getDay()]);
+let paragrafos = document.getElementsByClassName("paragrafo");
+
+for (let i = 0; i < paragrafos.length; i++) {
+  paragrafos[i].style.color = "Red";
+}
+
+subtitulo.style.color = "Green";
+
+let p3 = document.getElementById("p3");
+p3.setAttribute("newAtt", "sex");
+
+let p = document.getElementsByTagName("p");
+
+for (let i = 0; i < p.length; i++) {
+  console.log(p[i]);
+}
+
+console.log(p[1].textContent);
