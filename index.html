@@ -1,81 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./script.js" defer></script>
+    <title>JavaScript</title>
+    <script src="./script.js"></script>
     <style>
-        .container {
-            height: 500px;
-            width: 28%;
-            background-color: rgb(211, 178, 230);
-            text-align: center;
-            margin: auto;
-            border-radius: 20px;
-            padding-top: 30px;
-            overflow: auto;
-        }
-
         h1 {
-            background-color: whitesmoke;
+            background-color: rgb(228, 228, 228);
             display: inline-block;
-            padding: 10px;
-            padding-left: 80px;
-            padding-right: 80px;
             border-radius: 10px;
-            width: 40%;
-            overflow: auto;
-        }
-
-        input {
-            padding: 10px;
-            width: 80%;
-            border-radius: 9px;
-            outline-color: blueviolet;
-            border: none;
-            color: blueviolet;
-            font-weight: bold;
-            background-color: whitesmoke;
-        }
-
-        .padding {
-            margin-top: 40px;
         }
 
         button {
-            padding: 10px;
-            width: 30%;
-            border-radius: 10px;
-            border: none;
-            background-color: whitesmoke;
-            box-shadow: 2px 2px 5px rgb(190, 152, 212);
             cursor: pointer;
         }
 
-        button:active {
-            background-color: rgb(190, 152, 212);
+        input[type="color"] {
+            cursor: pointer;
         }
 
-        a {
-            font-size: larger;
-            text-decoration: none;
-            color: blueviolet;
-        }
-
-        a:active {
-            color: whitesmoke;
+        #pickcolor {
+            display: none;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Title</h1>
-        <p class="padding">Write down what you want to appear above:</p>
-        <input class="padding" type="text" placeholder="Write here" oninput="change(this)"><br><br>
-        <button class="padding" onclick="show_hide()">Show/Hide</button><br><br><br><br><br><br><br>
-        <a href="https://www.instagram.com/isabdch/" target="_blank">@isabdch</a>
-    </div>
+
+<body onload="load()">
+    <h1>Title</h1><br>
+    <input type="number">
+    <input type="color">
+    <button id="pickcolor">Pick color</button><br><br>
+    <button>Hide/Show</button><br><br><br><br>
+    <h2>Title 1</h2>
+    <h2>Title 2</h2>
 </body>
+
 </html>
