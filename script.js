@@ -1,17 +1,8 @@
-function f(e) {
-  console.log("Teste");
-  console.log(this);
-  console.log(e);
-}
+// let a = {nome: "Isabelle", nota: 8.5};
 
-function f1(e) {
-  console.log("Outro teste");
-  console.log(this);
-  console.log(e);
-  console.log(e.target);
-}
+// localStorage.setItem("aluno", JSON.stringify(a));
 
-window.onload = function () {
-  let titulo = document.getElementsByTagName("h1")[0];
-  titulo.addEventListener("click", f1);
-};
+let b = localStorage.getItem("aluno");
+
+console.log(JSON.parse(b));
+
