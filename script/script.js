@@ -27,7 +27,6 @@ function addToDo(event) {
   removeLiButton.innerHTML = "<i class='fas fa-times'></i>";
   todoDiv.appendChild(removeLiButton);
 
-  
   let completedButton = document.createElement("button");
   completedButton.classList.add("completed-button");
   completedButton.innerHTML = "<i class='fas fa-check'></i>";
@@ -36,6 +35,4 @@ function addToDo(event) {
 
 function clearToDo(event) {
   event.preventDefault();
-
-  
 }

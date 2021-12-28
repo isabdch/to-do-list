@@ -24,6 +24,7 @@ header {
     display: inline-block;
     padding: 10px;
     margin-top: 50px;
+    font-weight: bold;
 }
 
 form {
@@ -44,6 +45,10 @@ form button {
     outline: none;
 }
 
+form button {
+    border-left: 1px solid rgb(216, 216, 216);
+}
+
 input {
     font-weight: 600;
 }
@@ -60,6 +65,7 @@ button {
 button:hover {
     background-color: #8d7ac2;
     color: whitesmoke;
+    border: none;
 }
 
 button:active {
@@ -87,11 +93,17 @@ button:active {
     padding: 6px;
     border: none;
     background-color: whitesmoke;
+    border-left: 1px solid rgb(216, 216, 216);
+}
+
+.todo-div .remove-li {
+    border-top-right-radius: 10px;
 }
 
 .todo-div button:hover {
     background-color: #8d7ac2;
     color: whitesmoke;
+    border: none;
 }
 
 .todo-div button:active {
@@ -103,5 +115,5 @@ button:active {
     background-color: whitesmoke;
     width: 250px;
     padding: 5px;
+    border-bottom-left-radius: 10px;
 }
-
