@@ -1,6 +1,6 @@
 @font-face {
     font-family: myFont;
-    src: url('./CutiveMono-Regular.ttf');
+    src: url('./FreeMono.ttf');
 }
 
 * {
@@ -12,20 +12,18 @@
 
 body {
     background: linear-gradient(to right, #654ea3, #eaafc8);
-}
-
-#container {
+    min-height: 100vh;
     text-align: center;
-    margin-top: 110px;
 }
 
-h3 {
+header {
     font-size: xx-large;
     color: whitesmoke;
     border: 3px solid whitesmoke;
     border-radius: 5px;
     display: inline-block;
     padding: 10px;
+    margin-top: 50px;
 }
 
 form {
@@ -34,20 +32,19 @@ form {
     align-items: center;
 }
 
-input, button {
+form input,
+form button {
     margin-top: 30px;
     border: none;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     background-color: whitesmoke;
     color: #654ea3;
     outline: none;
-    font-size: medium;
 }
 
 input {
-    padding: 10.5px;
     font-weight: 600;
 }
 
@@ -67,5 +64,44 @@ button:hover {
 
 button:active {
     background-color: #a494d3;
+}
+
+#container-list {
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-div {
+    color: #654ea3;
+    margin: 20px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.todo-div button {
+    color: #654ea3;
+    width: 25px;
+    float: right;
+    padding: 6px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.todo-div button:hover {
+    background-color: #8d7ac2;
+    color: whitesmoke;
+}
+
+.todo-div button:active {
+    background-color: #a494d3;
+}
+
+.todo-li {
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 250px;
+    padding: 5px;
 }
 

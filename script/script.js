@@ -9,17 +9,33 @@ addLi.addEventListener("click", addToDo);
 clearLi.addEventListener("click", clearToDo);
 
 // events functions.
-function addToDo(event) {  
+function addToDo(event) {
   event.preventDefault();
+
   let todoDiv = document.createElement("div");
   todoDiv.classList.add("todo-div");
+  todoList.appendChild(todoDiv);
+
   let todoLi = document.createElement("li");
   todoLi.classList.add("todo-li");
-  todoLi.innerText = input.value;
-  todoList.appendChild(todoDiv);
   todoDiv.appendChild(todoLi);
+
+  todoLi.innerText = input.value;
+
+  let removeLiButton = document.createElement("button");
+  removeLiButton.classList.add("remove-li");
+  removeLiButton.innerHTML = "<i class='fas fa-times'></i>";
+  todoDiv.appendChild(removeLiButton);
+
+  
+  let completedButton = document.createElement("button");
+  completedButton.classList.add("completed-button");
+  completedButton.innerHTML = "<i class='fas fa-check'></i>";
+  todoDiv.appendChild(completedButton);
 }
 
-function clearToDo(event) {  
+function clearToDo(event) {
   event.preventDefault();
+
+  
 }
