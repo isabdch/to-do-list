@@ -154,6 +154,6 @@ function removeLocalStorage(todo) {
   }
 
   const toDoIndex = todo.children[0].innerText;
-  localStorage.setItem("todos", JSON.stringify(todos));
   todos.splice(todos.indexOf(toDoIndex), 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }

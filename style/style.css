@@ -103,10 +103,6 @@ select {
     transition: all 0.2s ease;
 }
 
-select:hover, .select:hover::after {
-    background-color: rgb(236, 236, 236);
-}
-
 .select select:focus {
     outline: none;
 }
