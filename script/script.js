@@ -3,6 +3,7 @@ const input = document.querySelector("input"); // input.
 const addLi = document.querySelector(".addLi"); // add button.
 const clearLi = document.querySelector(".clearLi"); // clear button.
 const todoList = document.querySelector(".todo-list"); // ul list.
+const header = document.querySelector("header");
 
 // add events to the elements.
 addLi.addEventListener("click", addToDo);
@@ -12,6 +13,8 @@ todoList.addEventListener("click", removeAndCheck);
 // events functions.
 function addToDo(event) {
   event.preventDefault(); // to prevent that form buttons make their default behavior.
+
+  header.style.marginTop = "50px";
 
   // creates new elements, then creates their classes names and connects them to other elements.
   const todoDiv = document.createElement("div");
