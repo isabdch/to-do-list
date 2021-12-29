@@ -43,29 +43,21 @@ function addToDo(event) {
 function clearToDo(event) {
   event.preventDefault();
   todoList.innerHTML = "";
+  header.style.marginTop = "200px";
 }
 
 function removeAndCheck(event) {
   const item = event.target;
-  if (item.classList[0] === "remove-li") {
-    const toDo = item.parentElement;
-    toDo.remove();
-  }
+  const toDo = item.parentElement;
 
-  if (item.classList[1] === "fa-times") {
-    const toDo = item.parentElement;
-    const toDo1 = toDo.parentElement;
-    toDo1.remove();
+  if (item.classList[0] === "remove-li") {
+    toDo.classList.add("fall");
+    toDo.addEventListener("transitionend", () => {
+      toDo.remove();
+    });
   }
 
   if (item.classList[0] === "checked-button") {
-    const toDo = item.parentElement;
     toDo.classList.toggle("checked");
-  }
-
-  if (item.classList[1] === "fa-check") {
-    const toDo = item.parentElement;
-    const toDo1 = toDo.parentElement;
-    toDo1.classList.toggle("checked");
   }
 }
