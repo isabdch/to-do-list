@@ -71,6 +71,50 @@ button:active {
     background-color: #a494d3;
 }
 
+.select {
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    width: 125px;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #654ea3;
+    background-color: whitesmoke;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    color: #654ea3;
+    background-color: whitesmoke;
+    top: 0;
+    right: 0;
+    padding: 0.8rem;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+select:hover, .select:hover::after {
+    background-color: rgb(236, 236, 236);
+}
+
+.select select:focus {
+    outline: none;
+}
+
+select option {
+    font-weight: bold;
+}
+
 #container-list {
     display: flex;
     justify-content: center;
@@ -96,7 +140,7 @@ button:active {
 }
 
 .todo-div button:hover {
-    background-color: rgb(223, 222, 222);
+    background-color: rgb(236, 236, 236);
 }
 
 .todo-div button:active {
@@ -134,3 +178,4 @@ button:active {
     transform: translate(8rem) rotate(20deg);
     opacity: 0;
 }
+
