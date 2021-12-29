@@ -65,7 +65,6 @@ button {
 button:hover {
     background-color: #8d7ac2;
     color: whitesmoke;
-    border: none;
 }
 
 button:active {
@@ -73,47 +72,55 @@ button:active {
 }
 
 #container-list {
-    min-width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 .todo-div {
+    /* .todo-div is a div inside of ul. */
     color: #654ea3;
-    margin: 20px;
     font-weight: bold;
-    list-style-type: none;
+    list-style-type: none; 
 }
 
 .todo-div button {
     color: #654ea3;
-    width: 25px;
     float: right;
+    width: 25px;
     padding: 6px;
     border: none;
     background-color: whitesmoke;
     border-left: 1px solid rgb(216, 216, 216);
 }
 
-.todo-div .remove-li {
-    border-top-right-radius: 10px;
-}
-
 .todo-div button:hover {
-    background-color: #8d7ac2;
-    color: whitesmoke;
-    border: none;
+    background-color: rgb(223, 222, 222);
 }
 
 .todo-div button:active {
-    background-color: #a494d3;
+    background-color: whitesmoke;
+}
+
+.todo-div .checked-button {
+    margin-left: 15px;
 }
 
 .todo-li {
+    /* list item */
     display: inline-block;
     background-color: whitesmoke;
-    width: 250px;
-    padding: 5px;
+    min-width: 250px;
     border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    line-height: 25px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.7;
 }
