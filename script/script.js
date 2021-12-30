@@ -15,8 +15,6 @@ todoList.addEventListener("click", removeAndCheck);
 function addToDo(event) {
   event.preventDefault(); // to prevent that form buttons make their default behavior.
 
-  header.style.marginTop = "50px";
-
   // creates new elements, then creates their classes names and connects them to other elements.
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo-div");
@@ -45,7 +43,6 @@ function addToDo(event) {
 function clearToDo(event) {
   event.preventDefault();
   todoList.innerHTML = "";
-  header.style.marginTop = "200px";
   localStorage.clear();
 }
 
