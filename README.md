@@ -25,4 +25,4 @@ This is a to-do list page where you can add tasks, checkmark them and remove the
 
 ## Status
 
-This project is still in progress. I want to add some new features and improve some existing things.
+This project is still in progress. I plan to add some new features and improve some already existing things.
