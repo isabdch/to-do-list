@@ -4,15 +4,12 @@ const addLi = document.querySelector(".addLi"); // add button.
 const clearLi = document.querySelector(".clearLi"); // clear button.
 const todoList = document.querySelector(".todo-list"); // ul list.
 const header = document.querySelector("header");
-const filterOption = document.querySelector("select")[0];
-const li = document.querySelector("li");
 
 // add events to the elements.
 document.addEventListener("DOMContentLoaded", getToDo);
 addLi.addEventListener("click", addToDo);
 clearLi.addEventListener("click", clearToDo);
 todoList.addEventListener("click", removeAndCheck);
-filterOption.addEventListener("click", filterToDo);
 
 // events functions.
 function addToDo(event) {
@@ -58,41 +55,15 @@ function removeAndCheck(event) {
 
   if (item.classList[0] === "remove-li") {
     toDo.classList.add("fall");
+    removeLocalStorage(toDo);
     toDo.addEventListener("transitionend", () => {
       toDo.remove();
-      removeLocalStorage(toDo);
     });
   }
 
   if (item.classList[0] === "checked-button") {
     toDo.classList.toggle("checked");
   }
-}
-
-function filterToDo(event) {
-  const options = todoList.childNodes;
-
-  options.forEach((todo) => {
-    switch (event.target.value) {
-      case "all":
-        todo.style.display = "flex";
-        break;
-      case "checked":
-        if (todo.classList.contains("checked")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-      case "unchecked":
-        if (!todo.classList.contains("checked")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-    }
-  });
 }
 
 function saveLocalToDo(todo) {
@@ -117,8 +88,6 @@ function getToDo() {
   }
 
   todos.forEach(function (todo) {
-    header.style.marginTop = "50px";
-
     // creates new elements, then creates their classes names and connects them to other elements.
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo-div");
@@ -153,9 +122,6 @@ function removeLocalStorage(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
 
-  for (let i = 0; i < todo.children.length; i++) {
-  const toDoIndex = todo.children[i].innerText;
-  todos.splice(todos.indexOf(toDoIndex), 1);
+  todos.splice(todos.indexOf(todo.innerText), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
-  }
 }
