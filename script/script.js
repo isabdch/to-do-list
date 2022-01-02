@@ -3,7 +3,6 @@ const input = document.querySelector("input"); // input.
 const addLi = document.querySelector(".addLi"); // add button.
 const clearLi = document.querySelector(".clearLi"); // clear button.
 const todoList = document.querySelector(".todo-list"); // ul list.
-const header = document.querySelector("header");
 
 // add events to the elements.
 document.addEventListener("DOMContentLoaded", getToDo);
@@ -85,7 +84,6 @@ function getToDo() {
   }
 
   todos.forEach(function (todo) {
-    // creates new elements, then creates their classes names and connects them to other elements.
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo-div");
 
