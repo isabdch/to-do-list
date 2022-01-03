@@ -1,6 +1,7 @@
 # To-do list page
 
 ## [SITE HERE](https://isabdch.github.io/to-do-list/)
+![](images/to-do-list.png)
 
 ## Table of Contents
 
