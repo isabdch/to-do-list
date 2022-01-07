@@ -22,7 +22,7 @@ This is a to-do list page where you can add tasks, checkmark them and remove the
   
 - ### JavaScript
   
-  To give real interactivity to the whole website. I used JSON with localStorage to save the data in the browser storage.
+  I learned how to use localStorage and made this project to practice. So I used JSON with localStorage to save the data in the browser storage.
 
 ## Status
 
