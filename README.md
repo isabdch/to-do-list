@@ -1,5 +1,10 @@
 # To-do list page
 
+![](https://img.shields.io/github/forks/isabdch/to-do-list?color=%238d7ac2&style=for-the-badge)
+![](https://img.shields.io/github/languages/count/isabdch/to-do-list?color=%238d7ac2&style=for-the-badge)
+![](https://img.shields.io/github/repo-size/isabdch/to-do-list?color=%238d7ac2&style=for-the-badge)
+![](https://img.shields.io/github/issues/isabdch/to-do-list?color=%238d7ac2&style=for-the-badge)
+
 ## [SITE HERE](https://isabdch.github.io/to-do-list/)
 ![](images/to-do-list.png)
 
