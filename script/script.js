@@ -59,6 +59,8 @@ function removeAndCheck(event) {
 
   if (item.classList[0] === "checked-button") {
     toDo.classList.toggle("checked");
+    toDo.setAttribute("checked", "");
+
   }
 }
 
